@@ -54,7 +54,7 @@ def elcca2txt_tmed(variable,archivo_salida):
      raise SystemExit
     for mes in range (1,13):
      mes_name = variable + per_name2 + str(mes)
-     archivo = "J:/proyectos/GLOBAL_REDIAM_3/datos/" + modelo_name + "/" + esc_name + "/" + modelo_name + "-" + esc_txt + "-" + variable + ".ws/" + per_name + "/" + mes_name + "/" "w001001.adf"
+     archivo = "RUTA ARCHIVO" + "/" "w001001.adf"
   #  archivo = archivo.encode('utf-8')
      dataset = gdal.Open( archivo, GA_ReadOnly )
      band = dataset.GetRasterBand(1)
@@ -76,7 +76,6 @@ def elcca2txt_tmed(variable,archivo_salida):
        x = x + 2000
        id_punto+=10
       y = y - 2000
-#     x = 100419.120
      procesado = "Modelo: " + modelo_name + "---" + "Escenario: " + esc_name + "---" + "Periodo: " + per_name2 [:5] + "---" + "Mes:" + str(mes) + "id_punto:" + str(id_punto)
      sys.stdout.write(' Procesando: ' + procesado)
      sys.stdout.flush()
@@ -84,7 +83,7 @@ def elcca2txt_tmed(variable,archivo_salida):
  archivo_salida2.close()
  print 'Finalizado a las: ' + datetime.datetime.strftime(datetime.datetime.now(), '%Y-%m-%d %H:%M:%S')
 if __name__ == '__main__':
- # El usuario  tiene que definir la ruta de archivos de entrada y la ruta y el nombre del archivo de salida en una cadena de texto
+ # El usuario  tiene que definir la ruta de archivos de entrada en el script y la variable  y la ruta y el nombre del archivo de salida en una cadena de texto en la ejecución
  if len(sys.argv) < 3 or len(sys.argv) > 3:
   print "uso: <variable y cadena con ruta_nombre de archivo txt>"
   raise SystemExit
