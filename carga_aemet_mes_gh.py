@@ -1,4 +1,5 @@
-#Autor-Jose I. Alvarez Francoso
+# Script para la descarga de datos mediante API AEMET
+# Autor-Jose I. Alvarez Francoso
 import httplib
 import json
 import csv
